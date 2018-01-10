@@ -22,7 +22,7 @@ import butterknife.BindView;
  * @author created by Wangw ;
  * @version 1.0
  * @data created time at 2018/1/10 ;
- * @Description 首页
+ * @Description 首页 界面
  */
 public class HomeFragment extends BaseFragment {
 
