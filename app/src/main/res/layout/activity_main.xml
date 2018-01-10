@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_app_theme"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_app_bg"
+        android:orientation="vertical">
+
+        <com.whatshappen.wynews.widget.NoScrollViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </com.whatshappen.wynews.widget.NoScrollViewPager>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_gray_e3" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbt_home"
+                style="@style/home_bottom_radiobutton_style"
+                android:drawableTop="@drawable/bottom_home_selector"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/rbt_news"
+                style="@style/home_bottom_radiobutton_style"
+                android:drawableTop="@drawable/bottom_news_selector"
+                android:text="要闻" />
+
+            <RadioButton
+                android:id="@+id/rbt_live"
+                style="@style/home_bottom_radiobutton_style"
+                android:drawableTop="@drawable/bottom_live_selector"
+                android:text="直播" />
+
+            <RadioButton
+                android:id="@+id/rbt_video"
+                style="@style/home_bottom_radiobutton_style"
+                android:drawableTop="@drawable/bottom_video_selector"
+                android:text="视频" />
+
+            <RadioButton
+                android:id="@+id/rbt_user"
+                style="@style/home_bottom_radiobutton_style"
+                android:drawableTop="@drawable/bottom_user_selector"
+                android:text="我" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+
+</LinearLayout>
