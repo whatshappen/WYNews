@@ -33,4 +33,16 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="channel_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--频道对话框动画样式-->
+    <style name="channel_dialog_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/channel_dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/channel_dialog_exit_anim</item>
+    </style>
+
 </resources>

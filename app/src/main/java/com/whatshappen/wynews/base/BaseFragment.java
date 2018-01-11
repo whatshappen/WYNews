@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,6 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activity = getActivity();
     }
 
     @Nullable
@@ -40,6 +40,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        activity = getActivity();
         initData(savedInstanceState);
     }
 
@@ -58,6 +59,29 @@ public abstract class BaseFragment extends Fragment {
      */
     protected void initData(Bundle savedInstanceState) {
 
+    }
+
+    /**
+     * 填充fragment
+     *
+     * @param viewId
+     * @param fragment
+     * @param tag
+     */
+    protected FragmentTransaction replaceFragment(int viewId, Fragment fragment, String tag) {
+        //获取FragmentManager，并开启事务
+        FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(viewId, fragment, tag);
+        //提交
+        fragmentTransaction.commit();
+        return fragmentTransaction;
+    }
+
+    protected FragmentTransaction replaceFragment(int viewId, Fragment fragment){
+        FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(viewId, fragment);
+        fragmentTransaction.commit();
+        return fragmentTransaction;
     }
 
     @Override

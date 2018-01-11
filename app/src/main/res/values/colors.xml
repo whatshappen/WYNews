@@ -11,4 +11,7 @@
     <color name="color_black">#000000</color>
     <color name="color_gray_aa">#AAAAAA</color>
     <color name="color_gray_e3">#E3E3E3</color>
+    <color name="color_gray_fa">@color/color_app_bg</color>
+    <color name="color_gray_d5">#D5D5D5</color>
+    <color name="color_red_tab_indicator">#ED5955</color>
 </resources>
